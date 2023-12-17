@@ -3,6 +3,10 @@ and The Backedn can be accessed on the following endpoint : ```https://flexmoney
 The Database i'm using is a FREE tier at ```neon.tech```
 
 DATABASE SCHEMA DESIGN : here, model is same as tables
+![20231218_013201](https://github.com/ssy2306/flexmoney-assignment/assets/77876285/60c8859a-a8f2-4579-a87b-9907d524fa91)
+
+The schema defines two main tables: User and Payment. The User table captures information about users, including their unique identifier (id), email, name, age, preferred batch, and creation/update timestamps. Additionally, each user can have multiple associated payments stored in the Payment table, linked through a one-to-many relationship. The Payment table contains details such as a unique payment identifier (id), payment amount, payment month, user ID referencing the associated user, and timestamps for creation and updates. The schema employs an enumeration (enum Batch) to specify batch options for users. This database model is structured to store user data and associated payment records, facilitating a relational representation of their interactions and payment history.
+
 ```
  // Model for user inputs
 enum Batch {
