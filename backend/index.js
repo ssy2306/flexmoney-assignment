@@ -10,8 +10,8 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use("/", welcomeRoute)
+app.use("/", welcomeRoute, userRoutes)
 
 app.listen(port, () => {
-    console.log("Server started at port ${port}");
+    console.log("Server started at port", port);
 });
