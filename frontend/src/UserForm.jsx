@@ -28,7 +28,7 @@ const UserForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/user', {
+      const response = await fetch('https://flexmoney-assignment-backend.onrender.com/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

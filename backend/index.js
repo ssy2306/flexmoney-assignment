@@ -1,4 +1,4 @@
-const { log } = require('console');
+const serverless = require ('serverless-http');
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 app.use("/", welcomeRoute, userRoutes)
-
-app.listen(port, () => {
-    console.log("Server started at port", port);
-});
+app.listen(port, ()=>{
+    console.log("server started at", port);
+})
+// module.exports.handler=serverless(app);

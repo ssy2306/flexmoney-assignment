@@ -2,7 +2,7 @@ const welcome = async (req, res) => {
     
     res
     .status(200)
-    .send({
+    .json({
         success: true,
         message: "API Called Successfully"
     })
