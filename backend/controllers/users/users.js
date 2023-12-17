@@ -4,8 +4,8 @@ const prisma = new PrismaClient();
 
 const createUser = async (req, res) => {
     try {
+        console.log("called");
         const { email, name, age, batch, paymentmonth } = req.body;
-
         if (!email || !name || !age || !batch) {
             return res.status(400).send({ error: 'Missing required fields' });
         }
@@ -15,7 +15,7 @@ const createUser = async (req, res) => {
                 email: email,
             },
         });
-
+console.log(checkIfUserExists);
         if (!checkIfUserExists) {
             const newUser = await prisma.user.create({
                 data: {
