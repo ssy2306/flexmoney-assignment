@@ -2,7 +2,7 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-const createUser = async (req, res) => {
+const completePayment = async (req, res) => {
     try {
         console.log("called");
         const { email, name, age, batch, paymentmonth } = req.body;
@@ -61,4 +61,4 @@ console.log(checkIfUserExists);
     }
 };
 
-module.exports = createUser;
+module.exports = completePayment;

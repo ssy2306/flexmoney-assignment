@@ -1,0 +1,15 @@
+.inputs{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-left: 20px;
+}
+
+.buttonn{
+    color: white;
+    background-color: black;
+    border: solid;
+    padding: 10;
+    border-radius: 5;
+    border-color: orange;
+}
